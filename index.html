@@ -145,13 +145,13 @@ nav a{font-weight:800;border:2px solid rgba(255,255,255,.35);}
       <div class="essay-label">DESCRIPTION</div>
       <h3>High-Speed Vision Platform for AI.</h3>
       <div class="essay-label">HOOK</div>
-      <p>Mantis is the high speed vision platform for AI, 100x faster than legacy vision, we deliver immediate detection and reply against drones and independent threats.</p>
+      <p>Mantling is the high speed vision platform for AI, 100x faster than legacy vision, we deliver immediate detection and reply against drones and independent threats.</p>
       <div class="essay-label">SUMMARY</div>
-      <p>New drones and independent threats move faster than legacy vision systems can “see”. Mantis connects submillisecond vision with multi-sensor data and instant control to deliver base accuracy and omit response delay. From open spaces to transportation hubs and city centers, Mantis adapts to any environment combining the perfect sensors and instinct responses to neutralise threats before they harm public safety or critical infrastructure.</p>
+      <p>New drones and independent threats move faster than legacy vision systems can “see”. Mantling connects submillisecond vision with multi-sensor data and instant control to deliver base accuracy and omit response delay. From open spaces to transportation hubs and city centers, Mantling adapts to any environment combining the perfect sensors and instinct responses to neutralise threats before they harm public safety or critical infrastructure.</p>
       <div class="learn-box"><b>🧠 Learning spotlight:</b> This essay uses ideas from artificial intelligence, computer vision, sensors, speed and autonomous systems.</div>
     </article>
     <figure class="pic-card">
-      <img src="mantis-piccollage.jpeg" alt="Mantling PicCollage showing drones over cities, airports and landscapes">
+      <img src="mantling-piccollage.jpeg" alt="Mantling PicCollage showing drones over cities, airports and landscapes">
       <figcaption>📸 My Mantling PicCollage</figcaption>
     </figure>
   </div>
@@ -250,7 +250,7 @@ nav a{font-weight:800;border:2px solid rgba(255,255,255,.35);}
 <section class="section" id="founders">
   <div class="head"><div class="kicker">THE PEOPLE BEHIND THE IDEA ✨</div><h2>Founders & Creator</h2><p>Every great project starts with a question, an idea and people who want to build something useful.</p></div>
   <div class="founders-grid">
-    <article class="founder-box"><div class="founder-mark">🌐</div><h3>Mantling Founder</h3><p>The original Mantis.nm website was created by the creator's dad. It inspired the technology and vision that Mantis.nm KIDS brings to a younger audience.</p><p><b>Big idea:</b> Build technology that helps people see, understand and respond to the world around them.</p></article>
+    <article class="founder-box"><div class="founder-mark">🌐</div><h3>Mantling Founder</h3><p>The original Mantling.nm website was created by the creator's dad. It inspired the technology and vision that Mantling.nm KIDS brings to a younger audience.</p><p><b>Big idea:</b> Build technology that helps people see, understand and respond to the world around them.</p></article>
     <article class="founder-box"><div class="founder-mark">🚀</div><h3>Mantling Creator</h3><p>Mantling was shaped to make big technology ideas more approachable, colorful and fun for kids ages 7–12.</p><p><b>Creator mission:</b> Make learning feel like an adventure — with missions, badges, experiments and room for kids to think independently.</p></article>
   </div>
 </section>
@@ -289,8 +289,8 @@ nav a{font-weight:800;border:2px solid rgba(255,255,255,.35);}
 <script>
 
 const AVATARS=['🚁','🛸','🤖','🛰️','📡','🧠','🌐','⚙️','🔭','💠'];
-let profiles=JSON.parse(localStorage.getItem('mantisProfiles')||'[]');
-let activeProfileId=localStorage.getItem('mantisActiveProfile')||'';
+let profiles=JSON.parse(localStorage.getItem('mantlingProfiles')||'[]');
+let activeProfileId=localStorage.getItem('mantlingActiveProfile')||'';
 let selectedAvatar=AVATARS[0];
 function openProfiles(){document.getElementById('profileOverlay').classList.add('show');renderProfiles();hideProfileForm();}
 function closeProfiles(){document.getElementById('profileOverlay').classList.remove('show')}
@@ -298,8 +298,8 @@ function renderProfiles(){const list=document.getElementById('profileList');list
 function showProfileForm(){if(profiles.length>=10)return;document.getElementById('profileFormArea').style.display='block';selectedAvatar=AVATARS[0];document.getElementById('avatarGrid').innerHTML=AVATARS.map((a,i)=>`<button type="button" class="avatar-choice ${i===0?'selected':''}" onclick="pickAvatar('${a}',this)">${a}</button>`).join('');document.getElementById('profileName').focus();}
 function hideProfileForm(){document.getElementById('profileFormArea').style.display='none';}
 function pickAvatar(a,el){selectedAvatar=a;document.querySelectorAll('.avatar-choice').forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
-function saveProfile(){const name=document.getElementById('profileName').value.trim(),age=document.getElementById('profileAge').value,gender=document.getElementById('profileGender').value;if(!name||!age||!gender){alert('Please choose a name, age, gender option, and profile picture.');return}const p={id:Date.now().toString(),name,age,gender,avatar:selectedAvatar};profiles.push(p);activeProfileId=p.id;localStorage.setItem('mantisProfiles',JSON.stringify(profiles));localStorage.setItem('mantisActiveProfile',activeProfileId);document.getElementById('profileName').value='';document.getElementById('profileAge').value='';document.getElementById('profileGender').value='';hideProfileForm();renderProfiles();}
-function selectProfile(id){activeProfileId=id;localStorage.setItem('mantisActiveProfile',id);renderProfiles();setTimeout(closeProfiles,250)}
+function saveProfile(){const name=document.getElementById('profileName').value.trim(),age=document.getElementById('profileAge').value,gender=document.getElementById('profileGender').value;if(!name||!age||!gender){alert('Please choose a name, age, gender option, and profile picture.');return}const p={id:Date.now().toString(),name,age,gender,avatar:selectedAvatar};profiles.push(p);activeProfileId=p.id;localStorage.setItem('mantlingProfiles',JSON.stringify(profiles));localStorage.setItem('mantlingActiveProfile',activeProfileId);document.getElementById('profileName').value='';document.getElementById('profileAge').value='';document.getElementById('profileGender').value='';hideProfileForm();renderProfiles();}
+function selectProfile(id){activeProfileId=id;localStorage.setItem('mantlingActiveProfile',id);renderProfiles();setTimeout(closeProfiles,250)}
 function updateActiveProfile(){const p=profiles.find(x=>x.id===activeProfileId),el=document.getElementById('activeProfileStrip');el.innerHTML=p?`<div class="active-profile"><span class="active-avatar">${p.avatar}</span> Exploring as ${escapeHtml(p.name)}</div>`:''}
 function escapeHtml(v){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[c]))}
 
@@ -313,9 +313,9 @@ const BADGES=[
  {id:'glossary',icon:'📚',name:'Glossary Pro',desc:'Explore the drone vocabulary.'},
  {id:'curious',icon:'🧠',name:'Curious Thinker',desc:'Explore a learning concept, the AI Zone or Future Planet.'}
 ];
-let unlocked=JSON.parse(localStorage.getItem('mantisBadges')||'[]');
+let unlocked=JSON.parse(localStorage.getItem('mantlingBadges')||'[]');
 function renderBadges(){const g=document.getElementById('badgeGrid'); if(!g)return; g.innerHTML=BADGES.map(b=>`<article class="badge-card ${unlocked.includes(b.id)?'unlocked':''}"><div class="badge-medal">${b.icon}</div><h3>${b.name}</h3><p>${b.desc}</p><span class="badge-status">${unlocked.includes(b.id)?'✓ Unlocked':'🔒 Locked'}</span></article>`).join(''); document.getElementById('badgeCount').textContent=unlocked.length; document.getElementById('badgeBar').style.width=(unlocked.length/BADGES.length*100)+'%';}
-function unlock(id){if(unlocked.includes(id))return; unlocked.push(id);localStorage.setItem('mantisBadges',JSON.stringify(unlocked));renderBadges();const t=document.getElementById('toast');const b=BADGES.find(x=>x.id===id);t.textContent='🏅 Badge unlocked: '+b.name+'!';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600);}
+function unlock(id){if(unlocked.includes(id))return; unlocked.push(id);localStorage.setItem('mantlingBadges',JSON.stringify(unlocked));renderBadges();const t=document.getElementById('toast');const b=BADGES.find(x=>x.id===id);t.textContent='🏅 Badge unlocked: '+b.name+'!';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600);}
 
 const missions={
  science:"⭐ Mission unlocked: Lift happens when the drone's propellers create an upward force that can counter gravity. Explain that in your own words!",
